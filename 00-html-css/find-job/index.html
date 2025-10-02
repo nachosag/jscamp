@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevJobs</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <nav>
+        <a class="hero" href="#">DevJobs</a>
+        <a href="#">Inicio</a>
+        <a href="#">Empleos</a>
+        <a href="#">Empresas</a>
+        <a href="#">Salarios</a>
+      </nav>
+      <div class="profile">
+        <button class="cv">Subir CV</button>
+        <div class="avatar">JS</div>
+      </div>
+    </header>
+
+    <div class="heading">
+      <h1>Encuentra tu próximo trabajo</h1>
+      <p>Explora miles de oportunidades en el sector tecnológico.</p>
+    </div>
+
+    <div class="content">
+
+      <section class="search-bar">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+          <input type="search" placeholder="Buscar trabajos, empresas o habilidades" aria-label="Buscar trabajos">
+        </div>
+        <section class="filters">
+          <button class="filter" type="button">Tecnología
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" />
+            </svg>
+          </button>
+          <button class="filter" type="button">Ubicación
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" />
+            </svg>
+          </button>
+          <button class="filter" type="button">Tipo de contrato
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" />
+            </svg>
+          </button>
+          <button class="filter" type="button">Nivel de experiencia
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+              class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" />
+            </svg>
+          </button>
+        </section>
+      </section>
+
+      <div>
+        <h3>Resultados de búsqueda</h3>
+        <article class="job-offer">
+          <div>
+            <h4>Ingeniero de Software</h4>
+            <p class="company">Tech Solutions Inc. | Remoto</p>
+            <p class="description">Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos
+              en JavaScript, React
+              y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
+              comunicación.
+            </p>
+          </div>
+          <div><button class="apply" type="button">Aplicar</button></div>
+        </article>
+
+        <article class="job-offer">
+          <div>
+            <h4>Analista de datos</h4>
+            <p class="company">Data Driven Co. | Ciudad de México</p>
+            <p class="description">Estamos buscando un analista de datos con experiencia en el manejo de grandes
+              conjuntos de datos y
+              herramientas de visualizacion. Se requiere conocimiento en SQL, Python y R.
+            </p>
+          </div>
+          <div><button class="apply" type="button">Aplicar</button></div>
+        </article>
+
+        <article class="job-offer">
+          <div>
+            <h4>Desarrollo de Aplicaciones Móviles</h4>
+            <p class="company">Mobile Apps Ltd. | Guadalajara</p>
+            <p class="description">Buscamos un desarollador de aplicaciones móviles con experiencia en iOS y/o Android.
+              El candidato debe
+              tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.
+            </p>
+          </div>
+          <div><button class="apply" type="button">Aplicar</button></div>
+        </article>
+
+        <article class="job-offer">
+          <div>
+            <h4>Ingeniero de DevOps</h4>
+            <p class="company">Cloud Services SA | Remoto</p>
+            <p class="description">Estamos buscando un ingeniero de DevOps con experiencia en la gestión de
+              infraestructuras en la nube,
+              automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure
+              y
+              GCP.
+            </p>
+          </div>
+          <div><button class="apply" type="button">Aplicar</button></div>
+        </article>
+      </div>
+    </div>
+    <nav class="pagination">
+      <ul class="pagination-list">
+        <li class="pagination-item"><a href="#">
+            < </a>
+        </li>
+        <li class="pagination-item">
+          <a class="current-page" href="#">1</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#">4</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#">5</a>
+        </li>
+        <li class="pagination-item"><a href="#"> > </a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+
+</html>
