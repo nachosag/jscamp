@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevJobs</title>
+  <meta name="description" content="DevJobs - Portal de empleo especializado en tecnología. Encuentra las mejores oportunidades laborales en el sector tech.">
+  <meta name="keywords" content="empleos tecnología, trabajo programación, ofertas IT, desarrollo software, tech jobs">
+  <meta name="theme-color" content="#06182a">
+  <meta property="og:title" content="DevJobs - Encuentra tu próximo trabajo en tecnología">
+  <meta property="og:description" content="Portal de empleo especializado en tecnología. Explora miles de oportunidades laborales en el sector tech.">
+  <meta property="og:type" content="website">
+  <title>DevJobs - Encuentra tu próximo trabajo en tecnología</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-  <main>
-
-    <header>
-      <nav>
-        <a class="hero" href="#">DevJobs</a>
-        <a href="#">Inicio</a>
-        <a href="#">Empleos</a>
-        <a href="#">Empresas</a>
-        <a href="#">Salarios</a>
-      </nav>
-      <div class="profile">
-        <button class="cv">Subir CV</button>
-        <div class="avatar">JS</div>
-      </div>
-    </header>
-
-    <div class="heading">
-      <h1>Encuentra tu próximo trabajo</h1>
-      <p>Explora miles de oportunidades en el sector tecnológico.</p>
+  <header class="site-header">
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a class="hero" href="/" aria-label="DevJobs - Inicio">DevJobs</a>
+      <ul class="nav-links">
+        <li><a href="/" aria-current="page">Inicio</a></li>
+        <li><a href="/empleos">Empleos</a></li>
+        <li><a href="/empresas">Empresas</a></li>
+        <li><a href="/salarios">Salarios</a></li>
+      </ul>
+    </nav>
+    <div class="profile">
+      <button class="cv" type="button" aria-label="Subir Curriculum Vitae">Subir CV</button>
+      <button class="avatar" role="img" aria-label="Iniciales del usuario">JS</>
     </div>
+  </header>
 
-    <div class="content">
+  <main class="main-content">
 
-      <section class="search-bar">
-        <div>
+    <section class="hero-section" aria-labelledby="main-heading">
+      <h1 id="main-heading">Encuentra tu próximo trabajo</h1>
+      <p>Explora miles de oportunidades en el sector tecnológico.</p>
+    </section>
+
+    <div class="content" role="region" aria-label="Contenido principal">
+
+      <form role="search" class="search-bar">
+        <div class="search-input-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search" aria-hidden="true">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
             <path d="M21 21l-6 -6" />
           </svg>
-          <input type="search" placeholder="Buscar trabajos, empresas o habilidades" aria-label="Buscar trabajos">
+          <input type="search" name="search" placeholder="Buscar trabajos, empresas o habilidades" aria-label="Buscar trabajos">
         </div>
-        <section class="filters">
+        <div class="filters" role="group" aria-label="Filtros de búsqueda">
           <button class="filter" type="button">Tecnología
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
               class="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
@@ -79,19 +87,24 @@
         </section>
       </section>
 
-      <div>
-        <h3>Resultados de búsqueda</h3>
+      <section class="search-results" aria-labelledby="search-results-heading">
+        <h2 id="search-results-heading">Resultados de búsqueda</h2>
         <article class="job-offer">
-          <div>
+          <div class="job-details">
             <h4>Ingeniero de Software</h4>
-            <p class="company">Tech Solutions Inc. | Remoto</p>
+            <p class="company">
+              <span class="company-name">Tech Solutions Inc.</span>
+              <span class="location" aria-label="Ubicación: Remoto">Remoto</span>
+            </p>
             <p class="description">Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos
               en JavaScript, React
               y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
               comunicación.
             </p>
           </div>
-          <div><button class="apply" type="button">Aplicar</button></div>
+          <div class="job-actions">
+            <button class="apply" type="button" aria-label="Aplicar a puesto de Ingeniero de Software">Aplicar</button>
+          </div>
         </article>
 
         <article class="job-offer">
@@ -133,27 +146,33 @@
         </article>
       </div>
     </div>
-    <nav class="pagination">
+    <nav class="pagination" role="navigation" aria-label="Navegación de páginas">
       <ul class="pagination-list">
-        <li class="pagination-item"><a href="#">
-            < </a>
+        <li class="pagination-item">
+          <a href="#" aria-label="Página anterior" class="pagination-link">
+            <span aria-hidden="true">&lt;</span>
+          </a>
         </li>
         <li class="pagination-item">
-          <a class="current-page" href="#">1</a>
+          <a class="pagination-link current-page" href="#" aria-current="page" aria-label="Página 1">1</a>
         </li>
         <li class="pagination-item">
-          <a href="#">2</a>
+          <a class="pagination-link" href="#" aria-label="Página 2">2</a>
         </li>
         <li class="pagination-item">
-          <a href="#">3</a>
+          <a class="pagination-link" href="#" aria-label="Página 3">3</a>
         </li>
         <li class="pagination-item">
-          <a href="#">4</a>
+          <a class="pagination-link" href="#" aria-label="Página 4">4</a>
         </li>
         <li class="pagination-item">
-          <a href="#">5</a>
+          <a class="pagination-link" href="#" aria-label="Página 5">5</a>
         </li>
-        <li class="pagination-item"><a href="#"> > </a></li>
+        <li class="pagination-item">
+          <a href="#" aria-label="Página siguiente" class="pagination-link">
+            <span aria-hidden="true">&gt;</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </main>
