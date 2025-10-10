@@ -23,6 +23,7 @@
 // })
 
 const jobsListingSection = document.querySelector('.jobs-listings')
+const allOffers = jobsListingSection.querySelectorAll('.offer')
 
 jobsListingSection.addEventListener('click', function(event) {
   const element = event.target
@@ -34,8 +35,33 @@ jobsListingSection.addEventListener('click', function(event) {
   }
 })
 
-const filter = document.querySelector('#filter-technology')
+const techFilter = document.querySelector('#filter-technology')
+const locationFilter = document.querySelector('#location')
+const expFilter = document.querySelector('#experience-level')
 
-filter.addEventListener('change', function () {
-  console.log(filter.value)
+function applyFilters () {
+  const selectedTech = techFilter.value
+  const selectedLocation = locationFilter.value
+  const selectedExp = expFilter.value
+
+  allOffers.forEach(offer => {
+    const techMatch = !selectedTech || offer.classList.contains(`tech-${selectedTech}`)
+    const locationMatch = !selectedLocation || offer.classList.contains(`location-${selectedLocation}`)
+    const expMatch = !selectedExp || offer.classList.contains(`exp-${selectedExp}`)
+
+    if (techMatch && locationMatch && expMatch) {
+      offer.classList.remove('hidden')
+    } else {
+      offer.classList.add('hidden')
+    }
+  })
+}
+
+techFilter.addEventListener('change', applyFilters)
+locationFilter.addEventListener('change', applyFilters)
+expFilter.addEventListener('change', applyFilters)
+
+const JobOffer = document.getElementById('job-offer')
+JobOffer.addEventListener('click', () => {
+  window.open('./homework/detail.html', '_blank')
 })
