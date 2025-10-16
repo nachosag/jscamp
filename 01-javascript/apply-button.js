@@ -1,3 +1,19 @@
+const jobsListingSection = document.querySelector('.jobs-listings')
+
+jobsListingSection.addEventListener('click', function(event) {
+  const element = event.target
+
+  if (element.classList.contains('button-apply-job')) {
+    element.textContent = '¡Aplicado!'
+    element.classList.add('is-applied')
+    element.disabled = true
+  }
+})
+
+
+// - Comentarios con otros eventos interesantes
+
+// otras formas de añadir eventos click a elementos
 // recupera solo el primer boton que encuentre
 // const boton = document.querySelector('.button-apply-job')
 // console.log(boton) // null si no lo encuentra
@@ -22,18 +38,17 @@
 //   })
 // })
 
-const jobsListingSection = document.querySelector('.jobs-listings')
 const allOffers = jobsListingSection.querySelectorAll('.offer')
+// ejemplos de eventos
+// const searchInput = document.querySelector('#empleos-search-input')
 
-jobsListingSection.addEventListener('click', function(event) {
-  const element = event.target
+// searchInput.addEventListener('input', function() {
+//   console.log(searchInput.value)
+// })
 
-  if (element.classList.contains('button-apply-job')) {
-    element.textContent = '¡Aplicado!'
-    element.classList.add('is-applied')
-    element.disabled = true
-  }
-})
+// searchInput.addEventListener('blur', function() {
+//   console.log('Se dispara cuando el campo pierde el foco')
+// })
 
 const techFilter = document.querySelector('#filter-technology')
 const locationFilter = document.querySelector('#location')
@@ -65,3 +80,17 @@ const JobOffer = document.getElementById('job-offer')
 JobOffer.addEventListener('click', () => {
   window.open('./homework/detail.html', '_blank')
 })
+// const searchForm = document.querySelector('#empleos-search-form')
+
+// searchForm.addEventListener('submit', function(event) {
+//   event.preventDefault()
+//   // ... todo lo que yo te diga aqui
+//   console.log('submit')
+// })
+
+// document.addEventListener('keydown', function(event) {
+//   console.log("Tecla presionada: ", event.key)
+//   console.log("¿Está pulsada la tecla shift?", event.shiftKey)
+//   console.log("¿Está pulsada la tecla ctrl?", event.ctrlKey)
+//   console.log("¿Está pulsada la tecla alt?", event.altKey)
+// })
